@@ -1,0 +1,10 @@
+$degrade-top-20: linear-gradient(to top, black 20%, rgb(61, 50, 50));
+$degrade-left-20: linear-gradient(to left, black 20%, rgb(61, 50, 50));
+$degrade-right-20: linear-gradient(to right, black 20%, rgb(61, 50, 50));
+$degrade-title:linear-gradient(to top,black 75% ,rgb(196, 196, 196));
+$degrade-about:linear-gradient(to right,white 5% ,rgb(0, 0, 0));
+
+
+
+$smartphone: "(max-width:768px)";
+$laptops: "(min-width:769px) and (max-width:1024px)"

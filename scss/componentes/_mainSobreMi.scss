@@ -1,0 +1,211 @@
+main{
+    
+    border-right:1px solid white;
+    border-left:1px solid white;
+    border-bottom: 1px solid white;
+
+ 
+
+    .itemSobreMi{
+        display:grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "imagen botones "
+        "parrafo parrafo "
+        ;
+    
+        .padreImagenSobreMi{
+            grid-area: imagen;
+            display:flex;
+            flex-direction: column;
+            background-image: $degrade-about;
+            .imagen-sobre-mi{
+                height: 550px;
+                width:500px;
+                margin: auto auto 0px auto;
+            }
+
+            p{
+                font-size: 50px;
+                margin: auto;
+            } 
+        }
+
+        .cv-sobre-mi{
+            grid:botones;
+            margin:auto;
+            background-image: none;
+            .botones-sobre-mi{
+                text-decoration: none;
+                background: black;
+                border-bottom: 5px solid grey;
+                border-radius: 12px;
+                box-shadow: 6px 6px 6px white;
+                color: white;
+                cursor: pointer;
+                padding: 30px;
+                text-align: center;
+                width: 400px;
+                margin:70px;
+                display:block;
+                &:hover{
+                    text-decoration: none;
+                    background: white;
+                    border-bottom: 5px solid black;
+                    border-radius: 12px;
+                    box-shadow: 6px 6px 6px white;
+                    color: black;
+                    cursor: pointer;
+                    padding: 30px;
+                    text-align: center;
+                    width: 400px;
+                    margin:70px;
+                    display:block;
+                    transform: scale(1.1);
+                    transition: all;
+                    transition-duration: 1s;
+                }
+            }
+
+            @mixin estructuraBotones ($colorFondo,$colorLetra){
+                color:$colorLetra;
+                background-color: $colorFondo;
+            }
+
+            .botones-sobre-mi--nuevo{
+                @extend .botones-sobre-mi;
+                @include estructuraBotones(rgb(255, 255, 255),black );
+                box-shadow: 6px 6px 6px black;
+                &:hover{
+                    @include estructuraBotones(black,white);
+                }
+            }
+        }
+
+        .parrafoSobreMi{
+            grid-area: parrafo;
+            h3{
+                border:1px solid white;
+                text-align: center;
+                font-size: 25px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .titulosSeccion{ 
+                background-image: $degrade-title;
+                border:1px solid white;
+                height:45px;
+                text-align: center;
+                font-size: 30px;
+                margin-top:7px;
+                font-family: 'Cabin', sans-serif;
+                grid-area: tituloSeccion;
+                display: block;
+            }
+            .sobre-mi-texto{
+                background-color: black;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: large;
+            }
+            .instituciones{
+                margin-left: 100px;
+                img{
+                    height: 250px;
+                    width: 250px;
+                    margin-left: 30px;
+                    
+                }
+                .instituto{
+                    height:150px;
+                }
+            }
+        }
+    
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width:1024px){
+
+    main{
+        .itemSobreMi{
+            grid-template-columns:1fr 1fr ;
+            grid-template-rows:1fr 1fr;
+            grid-template-areas:
+            "imagen botones"
+            "parrafo parrafo"
+            ;
+            .padreImagenSobreMi{
+                background-image: $degrade-about;
+                p{
+                    color:white;
+                }
+                .imagen-sobre-mi{
+                    width: 100%;
+                }
+
+            }
+            .cv-sobre-mi{
+                background-image: none;
+            }
+        }
+    }
+    
+}
+
+
+
+
+@media only screen and (max-width:768px) {
+    main{ 
+        .itemSobreMi{
+            grid-template-columns:1fr ;
+            grid-template-rows:1fr 1fr;
+            grid-template-areas:
+            "imagen"
+            "botones"
+            "parrafo"
+            ;
+            .padreImagenSobreMi{
+                grid-area: imagen;
+                display:flex;
+                flex-direction: column;
+                background-image: $degrade-about;
+                .imagen-sobre-mi{
+                    height: 450px;
+                    width:450px;
+                }
+
+                p{
+                    background-image: none;
+                    color:white;
+                    font-size: 50px;
+
+                } 
+            }
+
+            .cv-sobre-mi{
+                grid:botones;
+                margin:auto;
+                background-image:none;
+                
+
+                @mixin estructuraBotones ($colorFondo,$colorLetra){
+                    color:$colorLetra;
+                    background-color: $colorFondo;
+                }
+
+                .botones-sobre-mi--nuevo{
+                    @extend .botones-sobre-mi;
+                    @include estructuraBotones(rgb(255, 255, 255),black );
+                    box-shadow: 6px 6px 6px black;
+                    &:hover{
+                        @include estructuraBotones(black,white);
+                    }
+                }
+            }
+
+           
+        }
+    }
+
+}

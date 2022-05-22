@@ -1,0 +1,29 @@
+.padreFooterSobre , .padreFooter{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "footerS footerS";
+    .footerSobreMi , .footerContacto{
+        background-color: grey;
+        color:white;
+        border:2px solid white;
+        grid-area: footerS; 
+        margin-top:50px;
+        width: 100%;
+        a{
+            text-decoration: none;
+            color:white;
+            margin:20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .copyright{
+            float:right;
+            color:white;
+            grid-area: copy;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        
+        }
+    }
+}

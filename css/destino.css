@@ -1,0 +1,371 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+}
+main .itemSobreMi {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "imagen botones " "parrafo parrafo ";
+}
+main .itemSobreMi .padreImagenSobreMi {
+  grid-area: imagen;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to right, white 5%, rgb(0, 0, 0));
+}
+main .itemSobreMi .padreImagenSobreMi .imagen-sobre-mi {
+  height: 550px;
+  width: 500px;
+  margin: auto auto 0px auto;
+}
+main .itemSobreMi .padreImagenSobreMi p {
+  font-size: 50px;
+  margin: auto;
+}
+main .itemSobreMi .cv-sobre-mi {
+  grid: botones;
+  margin: auto;
+  background-image: none;
+}
+main .itemSobreMi .cv-sobre-mi .botones-sobre-mi, main .itemSobreMi .cv-sobre-mi .botones-sobre-mi--nuevo {
+  text-decoration: none;
+  background: black;
+  border-bottom: 5px solid grey;
+  border-radius: 12px;
+  box-shadow: 6px 6px 6px white;
+  color: white;
+  cursor: pointer;
+  padding: 30px;
+  text-align: center;
+  width: 400px;
+  margin: 70px;
+  display: block;
+}
+main .itemSobreMi .cv-sobre-mi .botones-sobre-mi:hover, main .itemSobreMi .cv-sobre-mi .botones-sobre-mi--nuevo:hover {
+  text-decoration: none;
+  background: white;
+  border-bottom: 5px solid black;
+  border-radius: 12px;
+  box-shadow: 6px 6px 6px white;
+  color: black;
+  cursor: pointer;
+  padding: 30px;
+  text-align: center;
+  width: 400px;
+  margin: 70px;
+  display: block;
+  transform: scale(1.1);
+  transition: all;
+  transition-duration: 1s;
+}
+main .itemSobreMi .cv-sobre-mi .botones-sobre-mi--nuevo {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 6px 6px 6px black;
+}
+main .itemSobreMi .cv-sobre-mi .botones-sobre-mi--nuevo:hover {
+  color: white;
+  background-color: black;
+}
+main .itemSobreMi .parrafoSobreMi {
+  grid-area: parrafo;
+}
+main .itemSobreMi .parrafoSobreMi h3 {
+  border: 1px solid white;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+main .itemSobreMi .parrafoSobreMi .titulosSeccion {
+  background-image: linear-gradient(to top, black 75%, rgb(196, 196, 196));
+  border: 1px solid white;
+  height: 45px;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 7px;
+  font-family: "Cabin", sans-serif;
+  grid-area: tituloSeccion;
+  display: block;
+}
+main .itemSobreMi .parrafoSobreMi .sobre-mi-texto {
+  background-color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: large;
+}
+main .itemSobreMi .parrafoSobreMi .instituciones {
+  margin-left: 100px;
+}
+main .itemSobreMi .parrafoSobreMi .instituciones img {
+  height: 250px;
+  width: 250px;
+  margin-left: 30px;
+}
+main .itemSobreMi .parrafoSobreMi .instituciones .instituto {
+  height: 150px;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  main .itemSobreMi {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "imagen botones" "parrafo parrafo";
+  }
+  main .itemSobreMi .padreImagenSobreMi {
+    background-image: linear-gradient(to right, white 5%, rgb(0, 0, 0));
+  }
+  main .itemSobreMi .padreImagenSobreMi p {
+    color: white;
+  }
+  main .itemSobreMi .padreImagenSobreMi .imagen-sobre-mi {
+    width: 100%;
+  }
+  main .itemSobreMi .cv-sobre-mi {
+    background-image: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main .itemSobreMi {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "imagen" "botones" "parrafo";
+  }
+  main .itemSobreMi .padreImagenSobreMi {
+    grid-area: imagen;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, white 5%, rgb(0, 0, 0));
+  }
+  main .itemSobreMi .padreImagenSobreMi .imagen-sobre-mi {
+    height: 450px;
+    width: 450px;
+  }
+  main .itemSobreMi .padreImagenSobreMi p {
+    background-image: none;
+    color: white;
+    font-size: 50px;
+  }
+  main .itemSobreMi .cv-sobre-mi {
+    grid: botones;
+    margin: auto;
+    background-image: none;
+  }
+  main .itemSobreMi .cv-sobre-mi .botones-sobre-mi--nuevo {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 6px 6px 6px black;
+  }
+  main .itemSobreMi .cv-sobre-mi .botones-sobre-mi--nuevo:hover {
+    color: white;
+    background-color: black;
+  }
+}
+body {
+  background-color: black;
+  color: white;
+  margin: 0px 3px;
+}
+body .navbar {
+  border: 1px solid white;
+  display: block;
+}
+body .logo img {
+  grid-area: logo;
+  height: 40px;
+  margin-top: 2px;
+  margin-left: 1px;
+}
+
+.padreFooterSobre, .padreFooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "footerS footerS";
+}
+.padreFooterSobre .footerSobreMi, .padreFooterSobre .footerContacto, .padreFooter .footerSobreMi, .padreFooter .footerContacto {
+  background-color: grey;
+  color: white;
+  border: 2px solid white;
+  grid-area: footerS;
+  margin-top: 50px;
+  width: 100%;
+}
+.padreFooterSobre .footerSobreMi a, .padreFooterSobre .footerContacto a, .padreFooter .footerSobreMi a, .padreFooter .footerContacto a {
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.padreFooterSobre .footerSobreMi .copyright, .padreFooterSobre .footerContacto .copyright, .padreFooter .footerSobreMi .copyright, .padreFooter .footerContacto .copyright {
+  float: right;
+  color: white;
+  grid-area: copy;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+main {
+  border: 1px solid white;
+}
+main .itemContacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: rgb(24, 24, 24);
+  border: 3px solid white;
+  grid-template-areas: "formulario formulario formulario" "tituloRedes tituloRedes tituloRedes" "redes redes redes";
+}
+main .itemContacto .div-contacto {
+  display: block;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 25px;
+  grid-area: formulario;
+}
+main .itemContacto .div-contacto input, main .itemContacto .div-contacto textarea {
+  width: 100%;
+  background: black;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  border: 2px outset white;
+  color: white;
+}
+main .itemContacto .div-contacto input:focus, main .itemContacto .div-contacto textarea:focus {
+  width: 103%;
+  transition: all 1s;
+}
+main .itemContacto .div-contacto input[type=submit] {
+  width: 50%;
+  background: black;
+  border: 2px outset white;
+  padding: 15px;
+  margin: 10px;
+  color: white;
+  font-size: 16px;
+}
+main .itemContacto .div-contacto input[type=submit]:hover {
+  width: 60%;
+  background: rgba(255, 255, 255, 0.425);
+  color: black;
+  border: 2px outset black;
+}
+main .itemContacto .redes {
+  grid-area: redes;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  border-top: 3px solid white;
+}
+main .itemContacto .redes .redesLogo {
+  display: block;
+  margin: auto;
+}
+main .itemContacto .redes .redesLogo ul {
+  list-style-type: none;
+}
+main .itemContacto .redes .redesLogo ul li {
+  display: inline-block;
+}
+main .itemContacto .redes .redesLogo ul li a {
+  display: inline-block;
+  margin: auto;
+}
+main .itemContacto .redes .redesLogo ul li a img {
+  width: 70px;
+  height: 70px;
+}
+main .itemContacto .redes .redesLogo .logo-linkedin {
+  margin-left: 75px;
+  margin-top: 10px;
+  height: 80px;
+  width: 80px;
+}
+main .itemContacto .redes .redesLogo .logo-linkedin img:hover {
+  border-bottom: 2px solid #007ab9;
+  background-color: #007ab9;
+  border-radius: 10px;
+}
+main .itemContacto .redes .redesLogo .logo-gmail {
+  margin-left: 75px;
+  margin-top: 10px;
+  height: 80px;
+  width: 80px;
+}
+main .itemContacto .redes .redesLogo .logo-gmail img:hover {
+  border-bottom: 2px solid #f44336;
+  background-color: #f44336;
+  border-radius: 10px;
+}
+main .itemContacto .redes .redesLogo .logo-github {
+  margin-left: 75px;
+  margin-top: 10px;
+  height: 80px;
+  width: 80px;
+}
+main .itemContacto .redes .redesLogo .logo-github img:hover {
+  border-bottom: 2px solid white;
+  background-color: white;
+  border-radius: 10px;
+}
+main .itemContacto .redes .redesLogo .logo-telegram {
+  margin-left: 75px;
+  margin-top: 10px;
+  height: 80px;
+  width: 80px;
+}
+main .itemContacto .redes .redesLogo .logo-telegram img:hover {
+  border-bottom: 2px solid #229ED9;
+  background-color: #229ED9;
+  border-radius: 10px;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  main .itemContacto {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.1fr;
+    grid-template-areas: "formulario" "tituloRedes" "redes ";
+  }
+  main .itemContacto .div-contacto {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main .itemContacto {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.1fr;
+    grid-template-areas: "formulario" "tituloRedes" "redes ";
+  }
+  main .itemContacto .div-contacto {
+    width: 80%;
+    grid-area: formulario;
+  }
+  main .itemContacto .div-contacto input[type=submit] {
+    width: 80%;
+  }
+  main .itemContacto .redes {
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  main .itemContacto .redes .redesLogo {
+    display: inline-block;
+    margin-right: 100px;
+  }
+}
+
+/*# sourceMappingURL=destino.css.map */
